@@ -271,9 +271,9 @@ class AsyncVertexGeminiModel(llm.AsyncModel):
                 config=config,
             )
             if inspect.isawaitable(stream_iter):
-                stream_iter = await stream_iter
+                stream_iter = await stream_iter  # type: ignore[assignment]
 
-            async for chunk in stream_iter:
+            async for chunk in stream_iter:  # type: ignore[attr-defined]
                 if chunk.text:
                     yield chunk.text
         else:

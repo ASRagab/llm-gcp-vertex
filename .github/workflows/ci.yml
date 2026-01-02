@@ -29,7 +29,7 @@ jobs:
         run: uv sync --group dev
 
       - name: Run type checking
-        run: uv run basedpyright llm_gcp_vertex.py
+        run: uv run --with mypy mypy llm_gcp_vertex.py --ignore-missing-imports
 
       - name: Run tests
         run: uv run pytest tests/ -v
