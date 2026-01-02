@@ -1,6 +1,6 @@
 # llm-gcp-vertex
 
-LLM plugin for Google Cloud Vertex AI, providing access to Gemini and Claude models through their official SDKs. If you are looking for support for
+[llm](https://github.com/simonw/llm) plugin for Google Cloud Vertex AI, providing access to Gemini and Claude models through their official SDKs. If you are looking for support for
 Google AI Studio, see the `llm-gemini` plugin.
 
 ## Features
