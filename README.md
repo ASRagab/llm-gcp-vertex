@@ -30,7 +30,7 @@ gcloud auth application-default login
 
 **Using environment variables:**
 ```bash
-# Fallsback to GOOGLE_CLOUD_PROJECT AND GOOGLE_CLOUD_LOCATION if not set
+# Falls back to GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION if not set
 export LLM_VERTEX_CLOUD_PROJECT="your-project-id"
 export LLM_VERTEX_CLOUD_LOCATION="us-central1"  # optional, defaults to us-central1
 ```
@@ -47,22 +47,22 @@ llm keys set vertex-location  # optional
 
 | Model ID | Description |
 |----------|-------------|
-| `gemini-3-pro-preview` | Gemini 3.0 Pro (Preview) |
-| `gemini-3-flash-preview` | Gemini 3.0 Flash (Preview) |
-| `gemini-2.5-pro` | Gemini 2.5 Pro |
-| `gemini-2.5-flash` | Gemini 2.5 Flash |
-| `gemini-2.0-flash` | Gemini 2.0 Flash |
+| `gemini-3-pro-preview` | Latest flagship, complex reasoning (preview) |
+| `gemini-3-flash-preview` | Latest fast model (preview) |
+| `gemini-2.5-pro` | Strong reasoning and coding |
+| `gemini-2.5-flash` | Fast and cost-effective |
+| `gemini-2.0-flash` | Balanced speed and quality |
 
 ### Claude (via Vertex AI)
 
 | Model ID | Description |
 |----------|-------------|
-| `claude-opus-4.5` | Most intelligent, complex tasks |
-| `claude-sonnet-4.5` | Coding and agents |
+| `claude-opus-4.5` | Most capable, complex analysis |
+| `claude-sonnet-4.5` | Best for coding and agents |
 | `claude-haiku-4.5` | Fast and affordable |
-| `claude-opus-4.1` | Agentic search |
-| `claude-sonnet-4` | Balanced performance |
-| `claude-opus-4` | High capability |
+| `claude-opus-4.1` | Extended thinking, agentic tasks |
+| `claude-sonnet-4` | Balanced speed and capability |
+| `claude-opus-4` | Strong reasoning |
 
 ## Usage
 
@@ -105,16 +105,16 @@ llm -m gemini-2.0-flash "Explain recursion" -s "You are a patient teacher"
 ## Development
 
 ```bash
-git clone https://github.com/your-username/llm-gcp-vertex.git
+git clone https://github.com/ASRagab/llm-gcp-vertex.git
 cd llm-gcp-vertex
 
 # Install with dev dependencies
-uv sync
+uv sync --group dev
 
 # Run tests
 uv run pytest
 
-# Type check
+# Type check (strict)
 uv run basedpyright llm_gcp_vertex.py
 ```
 
