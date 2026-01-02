@@ -21,9 +21,6 @@ _version.py
 .coverage
 htmlcov/
 
-# uv
-uv.lock
-
 # Credentials (never commit these)
 *.json
 !pyproject.json
