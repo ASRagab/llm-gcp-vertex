@@ -1,6 +1,6 @@
 [project]
 name = "llm-gcp-vertex"
-version = "0.1.0"
+dynamic = ["version"]
 description = "LLM plugin for Google Cloud Vertex AI models including Gemini and Model Garden"
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -32,14 +32,21 @@ Repository = "https://github.com/your-username/llm-gcp-vertex"
 gcp_vertex = "llm_gcp_vertex"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
+
 [tool.hatch.build.targets.wheel]
-only-include = ["llm_gcp_vertex.py"]
+only-include = ["llm_gcp_vertex.py", "_version.py"]
 
 [tool.hatch.build.targets.sdist]
 include = ["llm_gcp_vertex.py", "README.md", "pyproject.toml", "LICENSE"]
+exclude = ["_version.py"]
 
 [project.optional-dependencies]
 dev = [
