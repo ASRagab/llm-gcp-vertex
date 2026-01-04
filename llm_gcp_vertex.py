@@ -12,7 +12,7 @@ import json
 import os
 from collections.abc import AsyncGenerator, Callable, Generator
 from functools import lru_cache
-from typing import TYPE_CHECKING, Any, cast, override
+from typing import TYPE_CHECKING, Any, cast
 
 import llm
 from pydantic import Field, field_validator
@@ -208,7 +208,6 @@ class VertexGeminiModel(llm.Model):
         self.model_id = model_id
         self.vertex_model_name = vertex_model_name
 
-    @override
     def execute(
         self,
         prompt: llm.Prompt,
@@ -252,7 +251,6 @@ class AsyncVertexGeminiModel(llm.AsyncModel):
         self.model_id = model_id
         self.vertex_model_name = vertex_model_name
 
-    @override
     async def execute(
         self,
         prompt: llm.Prompt,
@@ -439,7 +437,6 @@ class VertexClaudeModel(llm.Model):
         self.model_id = model_id
         self.vertex_model_name = vertex_model_name
 
-    @override
     def execute(
         self,
         prompt: llm.Prompt,
@@ -476,7 +473,6 @@ class AsyncVertexClaudeModel(llm.AsyncModel):
         self.model_id = model_id
         self.vertex_model_name = vertex_model_name
 
-    @override
     async def execute(
         self,
         prompt: llm.Prompt,
