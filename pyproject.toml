@@ -4,7 +4,7 @@ dynamic = ["version"]
 description = "LLM plugin for Google Cloud Vertex AI models including Gemini and Model Garden"
 readme = "README.md"
 license = { text = "Apache-2.0" }
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 authors = [
     { name = "Ahmad Ragab" }
 ]
@@ -14,8 +14,11 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
